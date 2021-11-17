@@ -1,4 +1,5 @@
 function Elf(name, weapon) {
+    console.log('this', this)
   this.name = name;
   this.weapon = weapon;
 }

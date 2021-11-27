@@ -1,6 +1,6 @@
 //private: is only accessible in the parent class not the child
 //protected: makes it accessible in the child classes but not once the class is instantiated
-//static: we can only access a property, utilty functions
+//static: we can only access a property, utility functions
 class AnimalC {
   public age: number;
   private legs: number;

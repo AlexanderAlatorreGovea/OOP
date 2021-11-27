@@ -28,3 +28,9 @@ export const typeChecker = (type, defaultValue, fieldName) => (val) => {
 
   return val;
 };
+
+const dates = {
+    name: 'alex'
+}
+
+console.log(typeChecker("object", {}, "dates"))

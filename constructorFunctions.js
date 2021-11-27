@@ -1,7 +1,7 @@
 function Elf(name, weapon) {
-    console.log('this', this)
   this.name = name;
   this.weapon = weapon;
+  console.log("this", this);
 }
 
 //this basically attaches the .attack method to
@@ -12,3 +12,4 @@ Elf.prototype.attack = function () {
 
 const peter = new Elf("petter", "stones");
 console.log(peter.name);
+ß

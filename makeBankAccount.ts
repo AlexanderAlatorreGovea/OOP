@@ -10,7 +10,13 @@ class makeBankAccountB {
   }
 
   get _balance() {
-    return this.balance;
+    const newBalance = this.increaseBalanceByOne()
+
+    return newBalance;
+  }
+
+  increaseBalanceByOne() {
+   return this.balance + 1
   }
 }
 const b = new makeBankAccountB(22);

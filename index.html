@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const makeGetUser = (fetch) => async (url) => {
+      const response = await fetch(url);
+      
+      if (!response.ok) {
+        throw new Error("something went wrong");
+      }
+
+      const json = await response.json();
+    
+      return json;
+    };
+
+    const api = (fetch) => {
+      return {
+        getUser: makeGetUser(fetch),
+      };
+    };
+
+    const user = async () => {
+      const response = api(window.fetch);
+
+      const json = await response.getUser(
+        "https://jsonplaceholder.typicode.com/posts"
+      );
+
+      console.log("json: ", json)
+    };
+
+    user();
+  </script>
+</html>

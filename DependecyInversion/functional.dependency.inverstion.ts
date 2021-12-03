@@ -42,7 +42,7 @@ export const SignUpService =
     return client.createUser({
       email,
       password,
-    });
+    }); 
   };
 
 //we can use the new implementation like so

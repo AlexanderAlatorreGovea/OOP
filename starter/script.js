@@ -155,13 +155,16 @@ class App {
     e.preventDefault();
 
     // Get data from form
+    const RUNNING = 'running';
+    const CYCLING = 'cycling';
+    
     const type = inputType.value;
     const distance = +inputDistance.value;
     const duration = +inputDuration.value;
     const { lat, lng } = this.#mapEvent.latlng;
     let workout;
 
-    if (type === 'running') {
+    if (type === RUNNING) {
       const cadence = +inputCadence.value;
 
       if (
@@ -173,7 +176,7 @@ class App {
       workout = new Running([lat, lng], distance, duration, cadence);
     }
 
-    if (type === 'cycling') {
+    if (type === CYCLING) {ß
       const elevation = +inputElevation.value;
 
       if (

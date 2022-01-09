@@ -17,6 +17,7 @@ class User {
   }
 }
 
+// Option one
 class UserBuilder {
   user: User;
   constructor(name) {
@@ -48,3 +49,4 @@ const user = new UserBuilder("Bob")
   .setPhone(1231123)
   .setAddress("5235 Road")
   .build();
+console.log(user);

@@ -5,6 +5,7 @@ class Subscribable<MessageType> {
 
   subscribe(callBack: (message: MessageType) => void): () => void {
     this.subscribers.add(callBack);
+    
     return () => {
       this.subscribers.delete(callBack);
     };

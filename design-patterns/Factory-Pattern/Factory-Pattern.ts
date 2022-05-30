@@ -37,8 +37,8 @@ class LoggerFactory {
   public static createLogger(): Logger {
     if (process.env.NODE_ENV === "production") {
       return new ProductionLogger();
-    } else {
-      return new DevelopmentLogger();
     }
+
+    return new DevelopmentLogger();
   }
 }
